@@ -22,6 +22,9 @@ const paymentsRouter = require("./routes/payments");
 const driverAuthRouter = require("./routes/driverAuth");
 const driverRouter = require("./routes/driver");
 const adminDriversRouter = require("./routes/adminDrivers");
+const promoRouter = require("./routes/promo");
+const adminFeedbackRouter = require("./routes/adminFeedback");
+const feedbackRouter = require("./routes/feedback");
 
 
 const app = express();
@@ -55,8 +58,6 @@ app.use("/api/fare", fareRouter);
 app.use("/api/bookings", bookingsRouter);
 app.use("/api/routes", searchRouter);
 app.use("/api/auth", authRouter);
-app.use("/api/adminFeedback", adminFeedbackRouter);
-app.use("/api/feedback", feedbackRouter);
 app.use("/api/admin/routes", adminRoutesRouter);
 app.use("/api/admin/packages", adminPackagesRouter);
 app.use("/api/admin/app-config", adminAppConfigRouter);
@@ -72,9 +73,9 @@ app.use("/api/payments", paymentsRouter);
 app.use("/api/driver/auth", driverAuthRouter);
 app.use("/api/driver", driverRouter);
 app.use("/api/promo", promoRouter);
-app.use("/api/admin/feedback", require("./routes/adminFeedback"));
-app.use("/api/feedback", require("./routes/feedback"));
-app.use("/api/promo", require("./routes/promo"));
+app.use("/api/adminFeedback", adminFeedbackRouter);
+app.use("/api/feedback", feedbackRouter);
+
 
 
 app.use((req, res) => {
