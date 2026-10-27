@@ -75,9 +75,7 @@ app.use("/api/promo", promoRouter);
 app.use("/api/admin/feedback", require("./routes/adminFeedback"));
 app.use("/api/feedback", require("./routes/feedback"));
 app.use("/api/promo", require("./routes/promo"));
-app.use("/api/admin/feedback", require("./routes/adminFeedback"));
-app.use("/api/feedback", require("./routes/feedback"));
-app.use("/api/promo", require("./routes/promo"));
+
 
 app.use((req, res) => {
   res.status(404).json({ error: "Not found" });
