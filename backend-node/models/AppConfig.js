@@ -16,6 +16,13 @@ const AppConfigSchema = new Schema(
     },
     androidStoreUrl: { type: String, default: "" },
     iosStoreUrl: { type: String, default: "" },
+  
+  // Promo banner on the route fare list. Empty promoTitle = banner hidden.
+    promoTitle: { type: String, default: "", maxlength: 80 },
+    promoCode: { type: String, default: "", maxlength: 30 },
+    promoNote: { type: String, default: "", maxlength: 120 },
+    androidStoreUrl: { type: String, default: "" },
+    iosStoreUrl: { type: String, default: "" },
   },
   { timestamps: true }
 );
