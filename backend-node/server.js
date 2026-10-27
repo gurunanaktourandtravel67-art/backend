@@ -22,8 +22,8 @@ const paymentsRouter = require("./routes/payments");
 const driverAuthRouter = require("./routes/driverAuth");
 const driverRouter = require("./routes/driver");
 const adminDriversRouter = require("./routes/adminDrivers");
-const adminDriversRouter = require("./routes/adminFeedback");
-const adminDriversRouter = require("./routes/feedback");
+const adminFeedbackRouter = require("./routes/adminFeedback");
+const feedbackRouter = require("./routes/feedback");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
