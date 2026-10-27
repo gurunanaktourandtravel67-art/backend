@@ -22,6 +22,8 @@ const paymentsRouter = require("./routes/payments");
 const driverAuthRouter = require("./routes/driverAuth");
 const driverRouter = require("./routes/driver");
 const adminDriversRouter = require("./routes/adminDrivers");
+const adminDriversRouter = require("./routes/adminFeedback");
+const adminDriversRouter = require("./routes/feedback");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -54,6 +56,8 @@ app.use("/api/fare", fareRouter);
 app.use("/api/bookings", bookingsRouter);
 app.use("/api/routes", searchRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/admin/feedback", "./routes/adminFeedback");
+app.use("/api/feedback", "./routes/feedback");
 app.use("/api/admin/routes", adminRoutesRouter);
 app.use("/api/admin/packages", adminPackagesRouter);
 app.use("/api/admin/app-config", adminAppConfigRouter);
