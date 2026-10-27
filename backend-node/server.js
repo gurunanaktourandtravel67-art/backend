@@ -24,6 +24,7 @@ const driverRouter = require("./routes/driver");
 const adminDriversRouter = require("./routes/adminDrivers");
 const adminFeedbackRouter = require("./routes/adminFeedback");
 const feedbackRouter = require("./routes/feedback");
+const promoRouter = require("./routes/promo");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -72,6 +73,7 @@ app.use("/api/distance", distanceRouter);
 app.use("/api/payments", paymentsRouter);
 app.use("/api/driver/auth", driverAuthRouter);
 app.use("/api/driver", driverRouter);
+app.use("/api/promo", promoRouter);
 
 app.use((req, res) => {
   res.status(404).json({ error: "Not found" });
